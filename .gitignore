@@ -1,0 +1,4 @@
+# macOS + nix build noise
+.DS_Store
+result
+result-*

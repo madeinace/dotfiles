@@ -1,0 +1,31 @@
+## backup existing brew list
+# brew bundle dump --file=~/Brewfile.before-nix --force
+## List all brews
+# brew leaves > homebrew-brews.txt
+## List all casks
+# brew list --cask > homebrew-casks.txt
+##################################
+## paste in configuration.nix
+# homebrew = {
+#   enable = true;
+#   onActivation.autoUpdate = true;
+#   onActivation.extraFlags = [ "--force" ];
+#   # Start with "uninstall" or omit cleanup entirely — NOT "zap" yet
+#   # onActivation.cleanup = "zap";
+# 
+#   brews = [
+#     # Paste everything from homebrew-brews.txt
+#     "git"
+#     "wget"
+#     # ...
+#   ];
+#   casks = [
+#     # Paste everything from homebrew-casks.txt
+#     "wezterm"
+#     "firefox"
+#     # ...
+#   ];
+# };
+##################################
+
+## here would be none this time
