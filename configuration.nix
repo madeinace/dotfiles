@@ -52,8 +52,12 @@
       "redis"
       "herdr"
     ];
+    taps = [
+      "qoderai/qoder"
+    ];
     casks = [
       "wezterm"
+      "qoderai/qoder/qodercli"
     ];
   };
 }
