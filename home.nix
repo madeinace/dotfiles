@@ -18,11 +18,12 @@ in
     neovim
     # the font everything renders in
     nerd-fonts.hack
+    noto-fonts-cjk-sans
   ];
   fonts.fontconfig.enable = true;
   home.sessionVariables = {
     EDITOR = "nvim";
-    # HOMEBREW_NO_AUTO_UPDATE = "1";
+    HOMEBREW_NO_AUTO_UPDATE = "1";
     # QODER_EXPOSE_TOKEN_USAGE = "1";
     # QODERCN_EXPOSE_TOKEN_USAGE = "1";
   };
