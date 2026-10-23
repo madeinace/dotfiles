@@ -48,6 +48,7 @@ in
       push = "git push";
       pull = "git pull";
       m = "git switch main";
+      ll = "ls -al";
       #java-17 = "export JAVA_HOME=$(/usr/libexec/java_home -v 17); java -version";
       #java-8 = "export JAVA_HOME=$(/usr/libexec/java_home -v 1.8); java -version";
     };
@@ -60,24 +61,6 @@ in
       #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
       #[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-      # openssl build flags
-      #export LDFLAGS="-L/opt/homebrew/opt/openssl/lib -L/opt/homebrew/opt/icu4c/lib"
-      #export CPPFLAGS="-I/opt/homebrew/opt/openssl/include -I/opt/homebrew/opt/icu4c/include"
-      #export PKG_CONFIG_PATH="/opt/homebrew/opt/openssl/lib/pkgconfig:/opt/homebrew/opt/icu4c/lib/pkgconfig"
-
-      # cli-hub
-      #[ -f "${config.home.homeDirectory}/.cli-hub/env" ] && . "${config.home.homeDirectory}/.cli-hub/env"
-
-      # loongsuite-pilot hooks
-      #if ! alias qodercli >/dev/null 2>&1 && ! typeset -f qodercli >/dev/null 2>&1; then
-      #  eval 'qodercli() { "/Users/ace/.loongsuite-pilot/hooks/qodercli-runtime-wrapper.sh" "$@"; }'
-      #fi
-      #if ! alias claude >/dev/null 2>&1 && ! typeset -f claude >/dev/null 2>&1; then
-      #  eval 'claude() { BUN_OPTIONS="--preload=/Users/ace/.loongsuite-pilot/hooks/claude-code-fetch-intercept.mjs ''${BUN_OPTIONS}" command claude "$@"; }'
-      #fi
-      #if ! alias qoderclicn >/dev/null 2>&1 && ! typeset -f qoderclicn >/dev/null 2>&1; then
-      #  eval 'qoderclicn() { LOONGSUITE_QODERCLI_FLAVOR=qoderclicn "/Users/ace/.loongsuite-pilot/hooks/qodercli-runtime-wrapper.sh" "$@"; }'
-      #fi
     '';
   };
 
